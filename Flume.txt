@@ -1,0 +1,23 @@
+sudo yum -y install telnet
+
+ping localhost
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.015 ms
+
+PING quickstart.cloudera (192.168.126.134) 56(84) bytes of data
+
+ifconfig -a
+eth1      Link encap:Ethernet  HWaddr 00:0C:29:1A:4B:F1  
+          inet addr:192.168.126.134  Bcast:192.168.126.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:11569 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5731 errors:0 dropped:0 overruns:0 carrier:0
+
+/etc/flume-ng
+/var/run/flume-ng
+/var/log/flume-ng
+/var/lib/flume-ng
+/usr/lib/flume-ng
+
+flume-ng agent -n a1 --conf /home/cloudera/flume/conf --conf-file /home/cloudera/flume/conf/example.conf  
+
